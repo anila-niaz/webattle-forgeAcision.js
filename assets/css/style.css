@@ -66,3 +66,24 @@ a.github{
   width: 140px;
   padding: 0.5em 0;
 }
+.chat{
+    position: absolute;
+    top: 460px;
+    width: 450px;
+    height: 265px;
+}
+
+.message-form{
+    width: 100%;
+}
+
+.messages{
+    height: 200px;
+    width: 450px;
+    resize: none;
+}
+
+.hide{
+    display: none
+}
+

@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="viewport" content = "width = device-width, height = device-height, initial-scale = 1, user-scalable = no" />
-  <script type="text/javascript" src="/lib/sprite.js"></script>
-  <script type="text/javascript" src="/browserify.js"></script>
-  <script type="text/javascript" src="public/game.js"></script>
-  <script type="text/javascript" src="public/client.js"></script>
-  <script type="text/javascript" src="public/sprites/tank.js"></script>
-  <script type="text/javascript" src="public/sprites/shell.js"></script>
-  <script type="text/javascript" src="public/mapLoader.js"></script>
-  <script type="text/javascript" src="public/maps/coolMap.js"></script>
-  <script type="text/javascript" src="public/maps/defaultMap.js"></script>
-  <link href="assets/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content = "width = device-width, height = device-height, initial-scale = 1, user-scalable = no" />
+    <script type="text/javascript" src="/lib/sprite.js"></script>
+    <script type="text/javascript" src="/browserify.js"></script>
+    <script type="text/javascript" src="lib/underscore/underscore.js"></script>
+    <script type="text/javascript" src="lib/acisionsdk-javascript-v1.2.0/sdk.min.js"></script>
+    <script type="text/javascript" src="public/forgeConnectManager.js"></script>
+    <script type="text/javascript" src="public/game.js"></script>
+    <script type="text/javascript" src="public/client.js"></script>
+    <script type="text/javascript" src="public/sprites/tank.js"></script>
+    <script type="text/javascript" src="public/sprites/shell.js"></script>
+    <script type="text/javascript" src="public/mapLoader.js"></script>
+    <script type="text/javascript" src="public/maps/coolMap.js"></script>
+    <script type="text/javascript" src="public/maps/defaultMap.js"></script>
+    <link href="assets/css/style.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <div id='loading'>Loading...</div>
-  <div id="controls" style="display:none;">
+<div id='loading'>Loading...</div>
+<div id="controls" style="display:none;">
     <span id="result"></span> FPS
     <br/>
     <a href="?canvas=1" id="canvas-mode">Use canvas backend.</a> <a href="?html=1" id="html-mode">Use HTML backend</a>
-  </div>
-  <div id='console'>
+</div>
+<div id='console'>
     <div id='score'></div>
     <div id='max_score'></div>
-  </div>
+</div>
+<div class="chat">
+    <form class="login-form" id="login-form">
+        <label>Login with Forge acision to chat</label>
+        </br>
+
+        <label>Login</label>
+        <input type="text" name="username" id="username"/>
+
+        <label>Password</label>
+        <input type="password" name="password" id="password"/>
+
+        <input type="button" value="Login" id="login-submit"/>
+    </form>
+    <div class="username" id="user">
+
+    </div>
+    <div class="chat-panel" id="chat-panel">
+        <textarea id="messages"
+            class="messages"
+            readonly="readonly">
+        </textarea>
+        <form id="message-form">
+            <label>Message :</label>
+            <input type="text" name="message" id="message"/>
+            <input type="button" value="Send" id="message-submit"/>
+        </form>
+    </div>
+</div>
 </body>
 <script>
-  if(window.location.href.indexOf('canvas') != -1) {
-      document.getElementById('canvas-mode').style.display = 'none';
-  } else {
-      document.getElementById('html-mode').style.display = 'none';
-  }
+    if(window.location.href.indexOf('canvas') != -1) {
+        document.getElementById('canvas-mode').style.display = 'none';
+    } else {
+        document.getElementById('html-mode').style.display = 'none';
+    }
 </script>
 </html>
