@@ -130,7 +130,7 @@ var Game = function(sock, ser) {
       tankState = {x: tank.x, y: tank.y};
     }
 
-    if(input.keyboard.space || input.mousedown){
+    if(input.keyboard.space){
       tank.shoot();
     }
 
