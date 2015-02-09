@@ -31,12 +31,6 @@ Point your browser to http://localhost:5000. If you have deployed it somewhere, 
 
 If you are just starting to learn and find code too difficult, checkout earlier tags, see changelog below.
 
-## Live Demo
-
-[http://webattle.herokuapp.com](http://webattle.herokuapp.com) - renders using HTML sprites
-
-[http://webattle.herokuapp.com/?canvas=1](http://webattle.herokuapp.com/?canvas=1) - renders using canvas sprites
-
 ## Deploying on Heroku
 
 https://devcenter.heroku.com/articles/heroku-labs-websockets
